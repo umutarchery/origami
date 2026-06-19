@@ -131,6 +131,20 @@ The example patches already in this repo (a comment in `BlockUtil`, the
 `DefaultUncaughtExceptionHandler` feature patch, a `CraftBlockSoundGroup` tweak) are
 harmless demonstrations of each mechanism — delete them once you add real changes.
 
+### What ships out of the box
+
+Origami already includes a small, dependency-free core under `io.papermc.origami`:
+
+- [`Origami`](origami-api/src/main/java/io/papermc/origami/Origami.java) (API) — the fork's
+  identity: `NAME`, `TAGLINE`, `URL`, `version()` (read from the jar manifest), and
+  `brandLine()`.
+- [`OrigamiBanner`](origami-server/src/main/java/io/papermc/origami/OrigamiBanner.java)
+  (server) — renders the Origami startup banner. Wire `OrigamiBanner.print(System.out)`
+  into the boot sequence with a small patch to show it on launch.
+
+Both depend only on the JDK, so they compile cleanly regardless of upstream Paper API
+churn — a good template for further additions.
+
 ### Rebasing onto a newer Paper
 
 1. Find the upstream Paper commit you want to build on.
