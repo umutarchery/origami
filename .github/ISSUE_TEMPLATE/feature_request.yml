@@ -1,0 +1,32 @@
+name: Feature / patch idea
+description: Suggest a server behaviour, API addition, or patch for Origami
+labels: ["enhancement"]
+body:
+  - type: textarea
+    id: idea
+    attributes:
+      label: What should Origami do?
+      description: Describe the feature, config option, or API you'd like.
+    validations:
+      required: true
+  - type: textarea
+    id: why
+    attributes:
+      label: Why does it belong in a fork?
+      description: >
+        Could this be a plugin instead? Forks are for things plugins can't do
+        (net.minecraft changes, new API). Explain why this needs to live in the server.
+    validations:
+      required: true
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      options:
+        - Server behaviour (paper-patches)
+        - net.minecraft internals (minecraft-patches)
+        - New API (origami-api)
+        - Config / startup
+        - Other
+    validations:
+      required: true

@@ -1,0 +1,56 @@
+name: Bug report
+description: Something in Origami behaves incorrectly
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting. If the bug also happens on upstream Paper, please
+        report it to PaperMC instead — Origami only owns its own changes.
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: A clear description of the bug and what you expected instead.
+      placeholder: When I do X, Origami does Y, but I expected Z.
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1. Start an Origami server with ...
+        2. Run ...
+        3. See error
+    validations:
+      required: true
+  - type: input
+    id: origami-version
+    attributes:
+      label: Origami version / commit
+      placeholder: "e.g. 1.21.11 build from commit abc1234"
+    validations:
+      required: true
+  - type: input
+    id: java-version
+    attributes:
+      label: Java version
+      placeholder: "e.g. Temurin 21.0.11"
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Relevant logs
+      description: Paste server logs or a stacktrace. Use a paste service for long logs.
+      render: shell
+  - type: checkboxes
+    id: confirms
+    attributes:
+      label: Confirmations
+      options:
+        - label: I checked this does not also happen on vanilla Paper
+          required: true
+        - label: I searched existing issues for duplicates
+          required: true

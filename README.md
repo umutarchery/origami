@@ -2,6 +2,10 @@
 
 > Paper, folded sharper.
 
+[![Build Origami](https://github.com/umutarchery/origami/actions/workflows/build.yml/badge.svg)](https://github.com/umutarchery/origami/actions/workflows/build.yml)
+[![Minecraft](https://img.shields.io/badge/Minecraft-1.21.11-brightgreen)](https://papermc.io)
+[![Upstream](https://img.shields.io/badge/upstream-Paper-blue)](https://github.com/PaperMC/Paper)
+
 **Origami** is a fork of [Paper](https://github.com/PaperMC/Paper) — the high-performance
 Minecraft server software. It is built with the official
 [`paperweight`](https://github.com/PaperMC/paperweight) patcher toolchain, so every change
