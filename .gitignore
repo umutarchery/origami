@@ -1,0 +1,23 @@
+# Ignore Gradle project-specific cache directory
+.gradle
+
+# Ignore Gradle build output directory
+build
+
+/run
+
+# Generated build script (produced from origami-*/build.gradle.kts.patch)
+/origami-server/build.gradle.kts
+/origami-api/build.gradle.kts
+
+# Materialised upstream sources (pulled & patched by paperweight)
+/origami-server/src/minecraft
+/paper-server
+/paper-api
+/paper-api-generator
+
+# Local build logs from applyAllPatches
+/applypatches.log
+/applyinfo.log
+
+.idea/
